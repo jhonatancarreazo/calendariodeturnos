@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Major+Mono+Display&family=Montserrat:wght@500;700&family=Poppins:wght@400;500;600&display=swap');
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Major Mono Display', sans-serif;
+}
+body{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.calendar {
+    background-color: #e0c3fc;
+    padding: 10px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.first_day{
+    grid-column-start: 5;
+}
+ol{
+    list-style-type: none;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(7,1fr);
+}
+
+.day{
+   
+    font-weight: bold;
+    text-align: center;
+    border: solid 0.1px #f2e4ff;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #f2e4ff;
+    height: 130px;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.month{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.month >h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+}
+.main {
+    text-align: center;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 2px;
+    border: solid 0.5px #b7b3b366;
+    border-radius: 15px;
+}
+.turno3{
+    background-color: #4158d0;
+    color: white;
+}
+
+.turno{
+    background-color: #8ec5fc;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    ol{
+        gap: 0px;
+    }
+    .day{
+        width: 100px;
+        height: 100px;
+        font-size: .5em;
+        overflow: hidden;
+        overflow-wrap: break-word;
+        border-radius: 0px;
+        border: #cdcdd0 solid .5px;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .day{
+        font-size: .7em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+    .main{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    ol{
+        grid: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+   
+    .day{
+        width: 13.28%;
+    }
+    
+
+}
